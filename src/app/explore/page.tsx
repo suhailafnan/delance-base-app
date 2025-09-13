@@ -10,7 +10,7 @@ import { GigCard } from "~/components/gigs/GigCard";
 import { contractAddress, contractABI } from "~/lib/contract";
 
 // Simple public client using viem (no signer needed)
-import { createPublicClient, http, type Log } from "viem";
+import { createPublicClient, http, type Log, type GetLogsReturnType } from "viem";
 const publicClient = createPublicClient({
   chain: baseSepolia,
   transport: http("https://base-sepolia-rpc.publicnode.com"),
