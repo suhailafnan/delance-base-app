@@ -1,24 +1,14 @@
-import { Metadata } from "next";
-import App from "./app";
-import { APP_NAME, APP_DESCRIPTION, APP_OG_IMAGE_URL } from "~/lib/constants";
-import { getFrameEmbedMetadata } from "~/lib/utils";
+// src/app/page.tsx
+import { Hero } from "~/components/landing/Hero";
+import { Features } from "~/components/landing/Features";
+import { HowItWorks } from "~/components/landing/HowItWorks";
 
-export const revalidate = 300;
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: APP_NAME,
-    openGraph: {
-      title: APP_NAME,
-      description: APP_DESCRIPTION,
-      images: [APP_OG_IMAGE_URL],
-    },
-    other: {
-      "fc:frame": JSON.stringify(getFrameEmbedMetadata()),
-    },
-  };
-}
-
-export default function Home() {
-  return (<App />);
+export default function LandingPage() {
+  return (
+    <div className="space-y-20">
+      <Hero />
+      <Features />
+      <HowItWorks />
+    </div>
+  );
 }

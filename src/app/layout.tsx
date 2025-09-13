@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
+// src/app/layout.tsx
+import Provider from "~/components/providers/WagmiProvider";
+import { Navbar } from "~/components/layout/Navbar";
+import "./globals.css";
 
-import "~/app/globals.css";
-import { Providers } from "~/app/providers";
-import { APP_NAME, APP_DESCRIPTION } from "~/lib/constants";
-
-export const metadata: Metadata = {
-  title: APP_NAME,
-  description: APP_DESCRIPTION,
-};
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
+      <body className="min-h-screen bg-background">
+        <Provider>
+          <Navbar />
+          <main className="pt-16"> {/* Account for fixed navbar */}
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
