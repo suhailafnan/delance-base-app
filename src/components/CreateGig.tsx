@@ -12,7 +12,7 @@ import { Label } from "./ui/label";
 export function CreateGig() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("0.01"); // Fixed amount
+  const amount = "0.01"; // Fixed amount
   const [skills, setSkills] = useState("");
   const [deadline, setDeadline] = useState("");
 
