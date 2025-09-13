@@ -4,7 +4,7 @@
 import { useAccount } from "wagmi";
 
 export default function DashboardPage() {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
 
   // Mock stats - replace with actual contract data
   const stats = {
@@ -29,7 +29,7 @@ export default function DashboardPage() {
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2">Dashboard</h1>
-        <p className="text-muted-foreground">Welcome back! Here's your activity overview</p>
+        <p className="text-muted-foreground">Welcome back! Heres your activity overview</p>
       </div>
 
       {/* Stats Cards */}

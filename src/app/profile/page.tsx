@@ -8,7 +8,7 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 
 export default function ProfilePage() {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const [userType, setUserType] = useState<'freelancer' | 'client' | ''>('');
   const [profile, setProfile] = useState({
     name: '',

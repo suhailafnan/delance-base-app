@@ -11,7 +11,7 @@ import { contractAddress, contractABI } from "~/lib/contract";
 import { baseSepolia } from "wagmi/chains";
 
 export default function CreateGigPage() {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const { data: hash, isPending, writeContract } = useWriteContract();
   
   const [gigData, setGigData] = useState({
@@ -133,7 +133,7 @@ export default function CreateGigPage() {
               required
             />
             <p className="text-xs text-muted-foreground mt-1">
-              For now, specify the freelancer's wallet address directly
+              For now, specify the freelancers wallet address directly
             </p>
           </div>
 

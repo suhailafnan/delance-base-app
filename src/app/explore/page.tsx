@@ -91,7 +91,7 @@ export default function ExplorePage() {
   useEffect(() => {
     const unwatch = publicClient.watchContractEvent({
       address: contractAddress,
-      abi: contractABI as any,
+      abi: contractABI,
       eventName: "GigFunded",
       onLogs: (logs: Log[]) => {
         const additions: Gig[] =

@@ -10,7 +10,7 @@ import { Label } from "~/components/ui/label";
 import { contractAddress, contractABI } from "~/lib/contract";
 
 export default function MyGigsPage() {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const { data: hash, isPending, writeContract } = useWriteContract();
   const [gigIdToApprove, setGigIdToApprove] = useState('');
 
